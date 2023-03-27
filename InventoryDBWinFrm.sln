@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryDBWinFrm", "InventoryDBWinFrm.csproj", "{670F49C1-9E80-4B9C-A2B0-0A5A3828AD4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{670F49C1-9E80-4B9C-A2B0-0A5A3828AD4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{670F49C1-9E80-4B9C-A2B0-0A5A3828AD4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{670F49C1-9E80-4B9C-A2B0-0A5A3828AD4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{670F49C1-9E80-4B9C-A2B0-0A5A3828AD4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A58CAF8E-74F1-452C-A2DA-FD97E9A34EB1}
+	EndGlobalSection
+EndGlobal
