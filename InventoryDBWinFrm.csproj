@@ -77,8 +77,11 @@
     </Compile>
     <Compile Include="Computers.cs" />
     <Compile Include="Inventory.cs" />
+    <Compile Include="Monitors.cs" />
+    <Compile Include="Printers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servers.cs" />
     <EmbeddedResource Include="ComputerFrm.resx">
       <DependentUpon>ComputerFrm.cs</DependentUpon>
     </EmbeddedResource>
