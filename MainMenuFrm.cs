@@ -24,8 +24,8 @@ namespace InventoryDBWinFrm
 
         private void printerBttn_Click(object sender, EventArgs e)
         {
-            PrinterFrm print = new PrinterFrm();
-            print.ShowDialog();
+            PrinterFrm prin = new PrinterFrm();
+            prin.ShowDialog();
         }
 
         private void serverBttn_Click(object sender, EventArgs e)

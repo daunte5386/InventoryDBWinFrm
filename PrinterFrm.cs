@@ -45,5 +45,12 @@ namespace InventoryDBWinFrm
         {
             this.Close();
         }
+
+        private void PrinterFrm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'printerDBDataSet.Printers' table. You can move, or remove it, as needed.
+            this.printersTableAdapter.Fill(this.printerDBDataSet.Printers);
+
+        }
     }
 }

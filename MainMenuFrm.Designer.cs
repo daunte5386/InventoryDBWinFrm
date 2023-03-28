@@ -150,6 +150,7 @@
             this.serverBttn.Size = new System.Drawing.Size(33, 23);
             this.serverBttn.TabIndex = 3;
             this.serverBttn.UseVisualStyleBackColor = true;
+            this.serverBttn.Click += new System.EventHandler(this.serverBttn_Click);
             // 
             // printerBttn
             // 
@@ -158,6 +159,7 @@
             this.printerBttn.Size = new System.Drawing.Size(33, 23);
             this.printerBttn.TabIndex = 2;
             this.printerBttn.UseVisualStyleBackColor = true;
+            this.printerBttn.Click += new System.EventHandler(this.printerBttn_Click);
             // 
             // monitorBttn
             // 
@@ -166,6 +168,7 @@
             this.monitorBttn.Size = new System.Drawing.Size(33, 23);
             this.monitorBttn.TabIndex = 1;
             this.monitorBttn.UseVisualStyleBackColor = true;
+            this.monitorBttn.Click += new System.EventHandler(this.monitorBttn_Click);
             // 
             // computerBttn
             // 

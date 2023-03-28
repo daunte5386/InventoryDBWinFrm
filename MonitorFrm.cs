@@ -43,5 +43,10 @@ namespace InventoryDBWinFrm
         {
             this.Close();
         }
+
+        private void monitorsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

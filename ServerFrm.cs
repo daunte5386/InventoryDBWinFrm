@@ -59,5 +59,12 @@ namespace InventoryDBWinFrm
         {
             this.Close();
         }
+
+        private void ServerFrm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'serverDBDataSet.Servers' table. You can move, or remove it, as needed.
+            this.serversTableAdapter.Fill(this.serverDBDataSet.Servers);
+
+        }
     }
 }

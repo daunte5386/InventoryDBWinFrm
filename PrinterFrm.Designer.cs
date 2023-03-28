@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.printerHeadTitleLbl = new System.Windows.Forms.Label();
             this.printerHeadLbl = new System.Windows.Forms.Label();
@@ -50,10 +51,27 @@
             this.printModelLbl = new System.Windows.Forms.Label();
             this.printMakeLbl = new System.Windows.Forms.Label();
             this.printViewTab = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.printRefreshBttn = new System.Windows.Forms.Button();
+            this.printerDBDataSet = new InventoryDBWinFrm.PrinterDBDataSet();
+            this.printersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.printersTableAdapter = new InventoryDBWinFrm.PrinterDBDataSetTableAdapters.PrintersTableAdapter();
+            this.tableAdapterManager = new InventoryDBWinFrm.PrinterDBDataSetTableAdapters.TableAdapterManager();
+            this.printerInvIDNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.printerMakeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.printerModelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.printerSerNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.printerTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.printerCartNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.printerLocationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.printerBodyPnl.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.printInputTab.SuspendLayout();
+            this.printViewTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.printerDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.printersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -202,9 +220,9 @@
             // 
             this.printerMakeTxtBx.Location = new System.Drawing.Point(394, 41);
             this.printerMakeTxtBx.Name = "printerMakeTxtBx";
+            this.printerMakeTxtBx.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.printerMakeTxtBx.Size = new System.Drawing.Size(217, 20);
             this.printerMakeTxtBx.TabIndex = 0;
-            this.printerMakeTxtBx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // printLocationLbl
             // 
@@ -268,13 +286,106 @@
             // 
             // printViewTab
             // 
+            this.printViewTab.Controls.Add(this.printRefreshBttn);
+            this.printViewTab.Controls.Add(this.dataGridView1);
             this.printViewTab.Location = new System.Drawing.Point(4, 22);
             this.printViewTab.Name = "printViewTab";
             this.printViewTab.Padding = new System.Windows.Forms.Padding(3);
             this.printViewTab.Size = new System.Drawing.Size(769, 389);
             this.printViewTab.TabIndex = 1;
-            this.printViewTab.Text = "tabPage2";
+            this.printViewTab.Text = "Printer View";
             this.printViewTab.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.printerInvIDNumDataGridViewTextBoxColumn,
+            this.printerMakeDataGridViewTextBoxColumn,
+            this.printerModelDataGridViewTextBoxColumn,
+            this.printerSerNumDataGridViewTextBoxColumn,
+            this.printerTypeDataGridViewTextBoxColumn,
+            this.printerCartNumDataGridViewTextBoxColumn,
+            this.printerLocationDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.printersBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(757, 347);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // printRefreshBttn
+            // 
+            this.printRefreshBttn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printRefreshBttn.Location = new System.Drawing.Point(688, 359);
+            this.printRefreshBttn.Name = "printRefreshBttn";
+            this.printRefreshBttn.Size = new System.Drawing.Size(75, 23);
+            this.printRefreshBttn.TabIndex = 1;
+            this.printRefreshBttn.Text = "Refresh";
+            this.printRefreshBttn.UseVisualStyleBackColor = true;
+            // 
+            // printerDBDataSet
+            // 
+            this.printerDBDataSet.DataSetName = "PrinterDBDataSet";
+            this.printerDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // printersBindingSource
+            // 
+            this.printersBindingSource.DataMember = "Printers";
+            this.printersBindingSource.DataSource = this.printerDBDataSet;
+            // 
+            // printersTableAdapter
+            // 
+            this.printersTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.UpdateOrder = InventoryDBWinFrm.PrinterDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // printerInvIDNumDataGridViewTextBoxColumn
+            // 
+            this.printerInvIDNumDataGridViewTextBoxColumn.DataPropertyName = "printerInvIDNum";
+            this.printerInvIDNumDataGridViewTextBoxColumn.HeaderText = "printerInvIDNum";
+            this.printerInvIDNumDataGridViewTextBoxColumn.Name = "printerInvIDNumDataGridViewTextBoxColumn";
+            this.printerInvIDNumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // printerMakeDataGridViewTextBoxColumn
+            // 
+            this.printerMakeDataGridViewTextBoxColumn.DataPropertyName = "printerMake";
+            this.printerMakeDataGridViewTextBoxColumn.HeaderText = "printerMake";
+            this.printerMakeDataGridViewTextBoxColumn.Name = "printerMakeDataGridViewTextBoxColumn";
+            // 
+            // printerModelDataGridViewTextBoxColumn
+            // 
+            this.printerModelDataGridViewTextBoxColumn.DataPropertyName = "printerModel";
+            this.printerModelDataGridViewTextBoxColumn.HeaderText = "printerModel";
+            this.printerModelDataGridViewTextBoxColumn.Name = "printerModelDataGridViewTextBoxColumn";
+            // 
+            // printerSerNumDataGridViewTextBoxColumn
+            // 
+            this.printerSerNumDataGridViewTextBoxColumn.DataPropertyName = "printerSerNum";
+            this.printerSerNumDataGridViewTextBoxColumn.HeaderText = "printerSerNum";
+            this.printerSerNumDataGridViewTextBoxColumn.Name = "printerSerNumDataGridViewTextBoxColumn";
+            // 
+            // printerTypeDataGridViewTextBoxColumn
+            // 
+            this.printerTypeDataGridViewTextBoxColumn.DataPropertyName = "printerType";
+            this.printerTypeDataGridViewTextBoxColumn.HeaderText = "printerType";
+            this.printerTypeDataGridViewTextBoxColumn.Name = "printerTypeDataGridViewTextBoxColumn";
+            // 
+            // printerCartNumDataGridViewTextBoxColumn
+            // 
+            this.printerCartNumDataGridViewTextBoxColumn.DataPropertyName = "printerCartNum";
+            this.printerCartNumDataGridViewTextBoxColumn.HeaderText = "printerCartNum";
+            this.printerCartNumDataGridViewTextBoxColumn.Name = "printerCartNumDataGridViewTextBoxColumn";
+            // 
+            // printerLocationDataGridViewTextBoxColumn
+            // 
+            this.printerLocationDataGridViewTextBoxColumn.DataPropertyName = "printerLocation";
+            this.printerLocationDataGridViewTextBoxColumn.HeaderText = "printerLocation";
+            this.printerLocationDataGridViewTextBoxColumn.Name = "printerLocationDataGridViewTextBoxColumn";
             // 
             // PrinterFrm
             // 
@@ -285,13 +396,19 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "PrinterFrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Printer Database Form";
+            this.Load += new System.EventHandler(this.PrinterFrm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.printerBodyPnl.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.printInputTab.ResumeLayout(false);
             this.printInputTab.PerformLayout();
+            this.printViewTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.printerDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.printersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -320,5 +437,18 @@
         private System.Windows.Forms.Button printExitBttn;
         private System.Windows.Forms.Button printClearBttn;
         private System.Windows.Forms.Button printSaveBttn;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button printRefreshBttn;
+        private PrinterDBDataSet printerDBDataSet;
+        private System.Windows.Forms.BindingSource printersBindingSource;
+        private PrinterDBDataSetTableAdapters.PrintersTableAdapter printersTableAdapter;
+        private PrinterDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridViewTextBoxColumn printerInvIDNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn printerMakeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn printerModelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn printerSerNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn printerTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn printerCartNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn printerLocationDataGridViewTextBoxColumn;
     }
 }
