@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace InventoryDBWinFrm
@@ -47,16 +46,10 @@ namespace InventoryDBWinFrm
         {
             this.Close();
         }
-        private void ComputerFrm_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'computerDBDataSet.Computer' table. You can move, or remove it, as needed.
-            this.computerTableAdapter.Fill(this.computerDBDataSet.Computer);
 
-        }
-
-        private void compRefreshBttn_Click(object sender, EventArgs e)
+             private void compRefreshBttn_Click(object sender, EventArgs e)
         {
-            this.computerTableAdapter.Fill(computerDBDataSet.Computer);
+            //this.computerTableAdapter.Fill(computerDBDataSet.Computer);
         }
     }
 }

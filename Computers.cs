@@ -50,7 +50,7 @@ namespace InventoryDBWinFrm
                                          "AttachDbFilename=|DataDirectory|\\InventoryDB.mdf;" +
                                          "Integrated Security=True");
 
-                string qry = "INSERT INTO Computer(computerMake, computerModel, computerSerNum, computerProc, computerProcSpeed, " +
+                string qry = "INSERT INTO Computers(computerMake, computerModel, computerSerNum, computerProc, computerProcSpeed, " +
                                                    "computerRAM, computerOS, computerOSBitType, computerHDDSize, computerLocation) " +
                                                    "Values ('" + Make + "', '" + Model + "', '" + SerialNumber + "', '" + computerProcessor +
                                                    "', '" + computerProcessorSpeed + "', '" + computerRAM + "', '" + computerOperatingSystem +

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.compHeadPnl = new System.Windows.Forms.Panel();
             this.compHeadTitleLbl = new System.Windows.Forms.Label();
             this.compHeadLbl = new System.Windows.Forms.Label();
@@ -60,30 +59,11 @@
             this.compMakeLbl = new System.Windows.Forms.Label();
             this.computerTabView = new System.Windows.Forms.TabPage();
             this.compRefreshBttn = new System.Windows.Forms.Button();
-            this.compDataGrid = new System.Windows.Forms.DataGridView();
-            this.computerDBDataSet = new InventoryDBWinFrm.ComputerDBDataSet();
-            this.computerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.computerTableAdapter = new InventoryDBWinFrm.ComputerDBDataSetTableAdapters.ComputerTableAdapter();
-            this.tableAdapterManager = new InventoryDBWinFrm.ComputerDBDataSetTableAdapters.TableAdapterManager();
-            this.computerInvIDNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.computerMakeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.computerModelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.computerSerNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.computerProcDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.computerProcSpeedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.computerRAMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.computerOSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.computerOSBitTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.computerHDDSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.computerLocationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.compHeadPnl.SuspendLayout();
             this.computerBodyPnl.SuspendLayout();
             this.compTabCntl.SuspendLayout();
             this.compInpTab.SuspendLayout();
             this.computerTabView.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.compDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computerDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // compHeadPnl
@@ -375,7 +355,6 @@
             // computerTabView
             // 
             this.computerTabView.Controls.Add(this.compRefreshBttn);
-            this.computerTabView.Controls.Add(this.compDataGrid);
             this.computerTabView.Location = new System.Drawing.Point(4, 22);
             this.computerTabView.Name = "computerTabView";
             this.computerTabView.Padding = new System.Windows.Forms.Padding(3);
@@ -387,122 +366,12 @@
             // compRefreshBttn
             // 
             this.compRefreshBttn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.compRefreshBttn.Location = new System.Drawing.Point(685, 433);
+            this.compRefreshBttn.Location = new System.Drawing.Point(689, 438);
             this.compRefreshBttn.Name = "compRefreshBttn";
             this.compRefreshBttn.Size = new System.Drawing.Size(75, 23);
             this.compRefreshBttn.TabIndex = 1;
             this.compRefreshBttn.Text = "Refresh";
             this.compRefreshBttn.UseVisualStyleBackColor = true;
-            // 
-            // compDataGrid
-            // 
-            this.compDataGrid.AutoGenerateColumns = false;
-            this.compDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.compDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.computerInvIDNumDataGridViewTextBoxColumn,
-            this.computerMakeDataGridViewTextBoxColumn,
-            this.computerModelDataGridViewTextBoxColumn,
-            this.computerSerNumDataGridViewTextBoxColumn,
-            this.computerProcDataGridViewTextBoxColumn,
-            this.computerProcSpeedDataGridViewTextBoxColumn,
-            this.computerRAMDataGridViewTextBoxColumn,
-            this.computerOSDataGridViewTextBoxColumn,
-            this.computerOSBitTypeDataGridViewTextBoxColumn,
-            this.computerHDDSizeDataGridViewTextBoxColumn,
-            this.computerLocationDataGridViewTextBoxColumn});
-            this.compDataGrid.DataSource = this.computerBindingSource;
-            this.compDataGrid.Location = new System.Drawing.Point(6, 6);
-            this.compDataGrid.Name = "compDataGrid";
-            this.compDataGrid.Size = new System.Drawing.Size(763, 424);
-            this.compDataGrid.TabIndex = 0;
-            // 
-            // computerDBDataSet
-            // 
-            this.computerDBDataSet.DataSetName = "ComputerDBDataSet";
-            this.computerDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // computerBindingSource
-            // 
-            this.computerBindingSource.DataMember = "Computer";
-            this.computerBindingSource.DataSource = this.computerDBDataSet;
-            // 
-            // computerTableAdapter
-            // 
-            this.computerTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ComputerTableAdapter = this.computerTableAdapter;
-            this.tableAdapterManager.UpdateOrder = InventoryDBWinFrm.ComputerDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // computerInvIDNumDataGridViewTextBoxColumn
-            // 
-            this.computerInvIDNumDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.computerInvIDNumDataGridViewTextBoxColumn.DataPropertyName = "computerInvIDNum";
-            this.computerInvIDNumDataGridViewTextBoxColumn.HeaderText = "Computer Inventory ID Number";
-            this.computerInvIDNumDataGridViewTextBoxColumn.Name = "computerInvIDNumDataGridViewTextBoxColumn";
-            this.computerInvIDNumDataGridViewTextBoxColumn.Width = 129;
-            // 
-            // computerMakeDataGridViewTextBoxColumn
-            // 
-            this.computerMakeDataGridViewTextBoxColumn.DataPropertyName = "computerMake";
-            this.computerMakeDataGridViewTextBoxColumn.HeaderText = "Computer Make";
-            this.computerMakeDataGridViewTextBoxColumn.Name = "computerMakeDataGridViewTextBoxColumn";
-            // 
-            // computerModelDataGridViewTextBoxColumn
-            // 
-            this.computerModelDataGridViewTextBoxColumn.DataPropertyName = "computerModel";
-            this.computerModelDataGridViewTextBoxColumn.HeaderText = "Computer Model";
-            this.computerModelDataGridViewTextBoxColumn.Name = "computerModelDataGridViewTextBoxColumn";
-            // 
-            // computerSerNumDataGridViewTextBoxColumn
-            // 
-            this.computerSerNumDataGridViewTextBoxColumn.DataPropertyName = "computerSerNum";
-            this.computerSerNumDataGridViewTextBoxColumn.HeaderText = "Computer Serial Number";
-            this.computerSerNumDataGridViewTextBoxColumn.Name = "computerSerNumDataGridViewTextBoxColumn";
-            // 
-            // computerProcDataGridViewTextBoxColumn
-            // 
-            this.computerProcDataGridViewTextBoxColumn.DataPropertyName = "computerProc";
-            this.computerProcDataGridViewTextBoxColumn.HeaderText = "Computer Processor";
-            this.computerProcDataGridViewTextBoxColumn.Name = "computerProcDataGridViewTextBoxColumn";
-            // 
-            // computerProcSpeedDataGridViewTextBoxColumn
-            // 
-            this.computerProcSpeedDataGridViewTextBoxColumn.DataPropertyName = "computerProcSpeed";
-            this.computerProcSpeedDataGridViewTextBoxColumn.HeaderText = "Computer Processor Speed";
-            this.computerProcSpeedDataGridViewTextBoxColumn.Name = "computerProcSpeedDataGridViewTextBoxColumn";
-            // 
-            // computerRAMDataGridViewTextBoxColumn
-            // 
-            this.computerRAMDataGridViewTextBoxColumn.DataPropertyName = "computerRAM";
-            this.computerRAMDataGridViewTextBoxColumn.HeaderText = "Computer RAM";
-            this.computerRAMDataGridViewTextBoxColumn.Name = "computerRAMDataGridViewTextBoxColumn";
-            // 
-            // computerOSDataGridViewTextBoxColumn
-            // 
-            this.computerOSDataGridViewTextBoxColumn.DataPropertyName = "computerOS";
-            this.computerOSDataGridViewTextBoxColumn.HeaderText = "Computer Operating System";
-            this.computerOSDataGridViewTextBoxColumn.Name = "computerOSDataGridViewTextBoxColumn";
-            // 
-            // computerOSBitTypeDataGridViewTextBoxColumn
-            // 
-            this.computerOSBitTypeDataGridViewTextBoxColumn.DataPropertyName = "computerOSBitType";
-            this.computerOSBitTypeDataGridViewTextBoxColumn.HeaderText = "Computer Operating System Bit Type";
-            this.computerOSBitTypeDataGridViewTextBoxColumn.Name = "computerOSBitTypeDataGridViewTextBoxColumn";
-            // 
-            // computerHDDSizeDataGridViewTextBoxColumn
-            // 
-            this.computerHDDSizeDataGridViewTextBoxColumn.DataPropertyName = "computerHDDSize";
-            this.computerHDDSizeDataGridViewTextBoxColumn.HeaderText = "Computer HDD Size";
-            this.computerHDDSizeDataGridViewTextBoxColumn.Name = "computerHDDSizeDataGridViewTextBoxColumn";
-            // 
-            // computerLocationDataGridViewTextBoxColumn
-            // 
-            this.computerLocationDataGridViewTextBoxColumn.DataPropertyName = "computerLocation";
-            this.computerLocationDataGridViewTextBoxColumn.HeaderText = "Computer Location";
-            this.computerLocationDataGridViewTextBoxColumn.Name = "computerLocationDataGridViewTextBoxColumn";
             // 
             // ComputerFrm
             // 
@@ -514,7 +383,7 @@
             this.Name = "ComputerFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Computer Database Screen";
-            this.Load += new System.EventHandler(this.ComputerFrm_Load);
+            //this.Load += new System.EventHandler(this.ComputerFrm_Load);
             this.compHeadPnl.ResumeLayout(false);
             this.compHeadPnl.PerformLayout();
             this.computerBodyPnl.ResumeLayout(false);
@@ -522,9 +391,6 @@
             this.compInpTab.ResumeLayout(false);
             this.compInpTab.PerformLayout();
             this.computerTabView.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.compDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computerDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.computerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -561,23 +427,7 @@
         private System.Windows.Forms.Label compModelLbl;
         private System.Windows.Forms.Label compMakeLbl;
         private System.Windows.Forms.TabPage computerTabView;
-        private System.Windows.Forms.DataGridView compDataGrid;
         private System.Windows.Forms.Button compRefreshBttn;
-        private ComputerDBDataSet computerDBDataSet;
-        private System.Windows.Forms.BindingSource computerBindingSource;
-        private ComputerDBDataSetTableAdapters.ComputerTableAdapter computerTableAdapter;
-        private ComputerDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridViewTextBoxColumn computerInvIDNumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn computerMakeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn computerModelDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn computerSerNumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn computerProcDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn computerProcSpeedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn computerRAMDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn computerOSDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn computerOSBitTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn computerHDDSizeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn computerLocationDataGridViewTextBoxColumn;
     }
 }
 

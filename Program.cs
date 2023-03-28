@@ -16,7 +16,7 @@ namespace InventoryDBWinFrm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ComputerFrm());
+            Application.Run(new mainMenuFrm());
         }
     }
 }
