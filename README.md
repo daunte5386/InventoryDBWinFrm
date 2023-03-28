@@ -1,0 +1,3 @@
+# InventoryDBWinFrm
+Inventory Database Application recreated in VS2019 from original
+This is the final release of the application.  This is just a basic application update to VS 2019 of the application that was created during the Capstone course taken when getting my Associates in Computer Programming.  The major issue that I have not put too much thought into why it is doing what it is doing is that the MDF file is not being installed when using the built in publishing in VS2019.  When copying the MDF file from the source code to the location specified in the crash error on start, the application works correctly and stores the data and refreshes the list properly.  If any other issues are found please let me know.  Thanks and enjoy
