@@ -66,5 +66,10 @@ namespace InventoryDBWinFrm
             this.serversTableAdapter.Fill(this.serverDBDataSet.Servers);
 
         }
+
+        private void servRefreshBttn_Click(object sender, EventArgs e)
+        {
+            this.serversTableAdapter.Fill(serverDBDataSet.Servers);
+        }
     }
 }

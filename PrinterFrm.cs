@@ -52,5 +52,10 @@ namespace InventoryDBWinFrm
             this.printersTableAdapter.Fill(this.printerDBDataSet.Printers);
 
         }
+
+        private void printRefreshBttn_Click(object sender, EventArgs e)
+        {
+            this.printersTableAdapter.Fill(printerDBDataSet.Printers);
+        }
     }
 }

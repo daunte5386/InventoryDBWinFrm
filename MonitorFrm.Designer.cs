@@ -51,8 +51,12 @@
             this.monModelLbl = new System.Windows.Forms.Label();
             this.monMakeLbl = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.monRefreshBttn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.monitorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.monitorDBDataSet = new InventoryDBWinFrm.MonitorDBDataSet();
+            this.monRefreshBttn = new System.Windows.Forms.Button();
+            this.monitorsTableAdapter = new InventoryDBWinFrm.MonitorDBDataSetTableAdapters.MonitorsTableAdapter();
+            this.tableAdapterManager = new InventoryDBWinFrm.MonitorDBDataSetTableAdapters.TableAdapterManager();
             this.monitorInvIDNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monitorMakeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monitorModelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,10 +64,6 @@
             this.monitorSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monitorTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monitorLocationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.monitorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.monitorDBDataSet = new InventoryDBWinFrm.MonitorDBDataSet();
-            this.monitorsTableAdapter = new InventoryDBWinFrm.MonitorDBDataSetTableAdapters.MonitorsTableAdapter();
-            this.tableAdapterManager = new InventoryDBWinFrm.MonitorDBDataSetTableAdapters.TableAdapterManager();
             this.monHeadPnl.SuspendLayout();
             this.monGridView.SuspendLayout();
             this.monTabCntrl.SuspendLayout();
@@ -296,16 +296,6 @@
             this.tabPage2.Text = "Monitor View";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // monRefreshBttn
-            // 
-            this.monRefreshBttn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monRefreshBttn.Location = new System.Drawing.Point(685, 351);
-            this.monRefreshBttn.Name = "monRefreshBttn";
-            this.monRefreshBttn.Size = new System.Drawing.Size(75, 23);
-            this.monRefreshBttn.TabIndex = 0;
-            this.monRefreshBttn.Text = "Refresh";
-            this.monRefreshBttn.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -324,49 +314,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(753, 339);
             this.dataGridView1.TabIndex = 1;
             // 
-            // monitorInvIDNumDataGridViewTextBoxColumn
-            // 
-            this.monitorInvIDNumDataGridViewTextBoxColumn.DataPropertyName = "monitorInvIDNum";
-            this.monitorInvIDNumDataGridViewTextBoxColumn.HeaderText = "monitorInvIDNum";
-            this.monitorInvIDNumDataGridViewTextBoxColumn.Name = "monitorInvIDNumDataGridViewTextBoxColumn";
-            this.monitorInvIDNumDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // monitorMakeDataGridViewTextBoxColumn
-            // 
-            this.monitorMakeDataGridViewTextBoxColumn.DataPropertyName = "monitorMake";
-            this.monitorMakeDataGridViewTextBoxColumn.HeaderText = "monitorMake";
-            this.monitorMakeDataGridViewTextBoxColumn.Name = "monitorMakeDataGridViewTextBoxColumn";
-            // 
-            // monitorModelDataGridViewTextBoxColumn
-            // 
-            this.monitorModelDataGridViewTextBoxColumn.DataPropertyName = "monitorModel";
-            this.monitorModelDataGridViewTextBoxColumn.HeaderText = "monitorModel";
-            this.monitorModelDataGridViewTextBoxColumn.Name = "monitorModelDataGridViewTextBoxColumn";
-            // 
-            // monitorSerNumDataGridViewTextBoxColumn
-            // 
-            this.monitorSerNumDataGridViewTextBoxColumn.DataPropertyName = "monitorSerNum";
-            this.monitorSerNumDataGridViewTextBoxColumn.HeaderText = "monitorSerNum";
-            this.monitorSerNumDataGridViewTextBoxColumn.Name = "monitorSerNumDataGridViewTextBoxColumn";
-            // 
-            // monitorSizeDataGridViewTextBoxColumn
-            // 
-            this.monitorSizeDataGridViewTextBoxColumn.DataPropertyName = "monitorSize";
-            this.monitorSizeDataGridViewTextBoxColumn.HeaderText = "monitorSize";
-            this.monitorSizeDataGridViewTextBoxColumn.Name = "monitorSizeDataGridViewTextBoxColumn";
-            // 
-            // monitorTypeDataGridViewTextBoxColumn
-            // 
-            this.monitorTypeDataGridViewTextBoxColumn.DataPropertyName = "monitorType";
-            this.monitorTypeDataGridViewTextBoxColumn.HeaderText = "monitorType";
-            this.monitorTypeDataGridViewTextBoxColumn.Name = "monitorTypeDataGridViewTextBoxColumn";
-            // 
-            // monitorLocationDataGridViewTextBoxColumn
-            // 
-            this.monitorLocationDataGridViewTextBoxColumn.DataPropertyName = "monitorLocation";
-            this.monitorLocationDataGridViewTextBoxColumn.HeaderText = "monitorLocation";
-            this.monitorLocationDataGridViewTextBoxColumn.Name = "monitorLocationDataGridViewTextBoxColumn";
-            // 
             // monitorsBindingSource
             // 
             this.monitorsBindingSource.DataMember = "Monitors";
@@ -377,6 +324,17 @@
             this.monitorDBDataSet.DataSetName = "MonitorDBDataSet";
             this.monitorDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // monRefreshBttn
+            // 
+            this.monRefreshBttn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monRefreshBttn.Location = new System.Drawing.Point(685, 351);
+            this.monRefreshBttn.Name = "monRefreshBttn";
+            this.monRefreshBttn.Size = new System.Drawing.Size(75, 23);
+            this.monRefreshBttn.TabIndex = 0;
+            this.monRefreshBttn.Text = "Refresh";
+            this.monRefreshBttn.UseVisualStyleBackColor = true;
+            this.monRefreshBttn.Click += new System.EventHandler(this.monRefreshBttn_Click);
+            // 
             // monitorsTableAdapter
             // 
             this.monitorsTableAdapter.ClearBeforeFill = true;
@@ -386,6 +344,49 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.UpdateOrder = InventoryDBWinFrm.MonitorDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // monitorInvIDNumDataGridViewTextBoxColumn
+            // 
+            this.monitorInvIDNumDataGridViewTextBoxColumn.DataPropertyName = "monitorInvIDNum";
+            this.monitorInvIDNumDataGridViewTextBoxColumn.HeaderText = "Monitor Inventory ID Number";
+            this.monitorInvIDNumDataGridViewTextBoxColumn.Name = "monitorInvIDNumDataGridViewTextBoxColumn";
+            this.monitorInvIDNumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // monitorMakeDataGridViewTextBoxColumn
+            // 
+            this.monitorMakeDataGridViewTextBoxColumn.DataPropertyName = "monitorMake";
+            this.monitorMakeDataGridViewTextBoxColumn.HeaderText = "Monitor Make";
+            this.monitorMakeDataGridViewTextBoxColumn.Name = "monitorMakeDataGridViewTextBoxColumn";
+            // 
+            // monitorModelDataGridViewTextBoxColumn
+            // 
+            this.monitorModelDataGridViewTextBoxColumn.DataPropertyName = "monitorModel";
+            this.monitorModelDataGridViewTextBoxColumn.HeaderText = "Monitor Model";
+            this.monitorModelDataGridViewTextBoxColumn.Name = "monitorModelDataGridViewTextBoxColumn";
+            // 
+            // monitorSerNumDataGridViewTextBoxColumn
+            // 
+            this.monitorSerNumDataGridViewTextBoxColumn.DataPropertyName = "monitorSerNum";
+            this.monitorSerNumDataGridViewTextBoxColumn.HeaderText = "Monitor Serial Number";
+            this.monitorSerNumDataGridViewTextBoxColumn.Name = "monitorSerNumDataGridViewTextBoxColumn";
+            // 
+            // monitorSizeDataGridViewTextBoxColumn
+            // 
+            this.monitorSizeDataGridViewTextBoxColumn.DataPropertyName = "monitorSize";
+            this.monitorSizeDataGridViewTextBoxColumn.HeaderText = "Monitor Size";
+            this.monitorSizeDataGridViewTextBoxColumn.Name = "monitorSizeDataGridViewTextBoxColumn";
+            // 
+            // monitorTypeDataGridViewTextBoxColumn
+            // 
+            this.monitorTypeDataGridViewTextBoxColumn.DataPropertyName = "monitorType";
+            this.monitorTypeDataGridViewTextBoxColumn.HeaderText = "Monitor Type";
+            this.monitorTypeDataGridViewTextBoxColumn.Name = "monitorTypeDataGridViewTextBoxColumn";
+            // 
+            // monitorLocationDataGridViewTextBoxColumn
+            // 
+            this.monitorLocationDataGridViewTextBoxColumn.DataPropertyName = "monitorLocation";
+            this.monitorLocationDataGridViewTextBoxColumn.HeaderText = "Monitor Location";
+            this.monitorLocationDataGridViewTextBoxColumn.Name = "monitorLocationDataGridViewTextBoxColumn";
             // 
             // MonitorFrm
             // 

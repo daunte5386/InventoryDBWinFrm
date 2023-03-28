@@ -47,16 +47,15 @@ namespace InventoryDBWinFrm
             this.Close();
         }
 
-             private void compRefreshBttn_Click(object sender, EventArgs e)
+        private void compRefreshBttn_Click(object sender, EventArgs e)
         {
-            //this.computerTableAdapter.Fill(computerDBDataSet.Computer);
+            this.computersTableAdapter.Fill(computerDBDataSet.Computers);
         }
 
         private void ComputerFrm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'computerDBDataSet.Computers' table. You can move, or remove it, as needed.
             this.computersTableAdapter.Fill(this.computerDBDataSet.Computers);
-
         }
     }
 }

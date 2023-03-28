@@ -65,10 +65,10 @@
             this.servMakeTxtBx = new System.Windows.Forms.TextBox();
             this.servMakeLbl = new System.Windows.Forms.Label();
             this.servViewTab = new System.Windows.Forms.TabPage();
-            this.servRefreshBttn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.serverDBDataSet = new InventoryDBWinFrm.ServerDBDataSet();
             this.serversBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.serverDBDataSet = new InventoryDBWinFrm.ServerDBDataSet();
+            this.servRefreshBttn = new System.Windows.Forms.Button();
             this.serversTableAdapter = new InventoryDBWinFrm.ServerDBDataSetTableAdapters.ServersTableAdapter();
             this.tableAdapterManager = new InventoryDBWinFrm.ServerDBDataSetTableAdapters.TableAdapterManager();
             this.serverInvIDNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,8 +91,8 @@
             this.servInputTab.SuspendLayout();
             this.servViewTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serverDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serversBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serverDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // servHeadPnl
@@ -449,16 +449,6 @@
             this.servViewTab.Text = "Server View";
             this.servViewTab.UseVisualStyleBackColor = true;
             // 
-            // servRefreshBttn
-            // 
-            this.servRefreshBttn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.servRefreshBttn.Location = new System.Drawing.Point(685, 549);
-            this.servRefreshBttn.Name = "servRefreshBttn";
-            this.servRefreshBttn.Size = new System.Drawing.Size(75, 23);
-            this.servRefreshBttn.TabIndex = 0;
-            this.servRefreshBttn.Text = "Refresh";
-            this.servRefreshBttn.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -484,15 +474,26 @@
             this.dataGridView1.Size = new System.Drawing.Size(758, 537);
             this.dataGridView1.TabIndex = 1;
             // 
+            // serversBindingSource
+            // 
+            this.serversBindingSource.DataMember = "Servers";
+            this.serversBindingSource.DataSource = this.serverDBDataSet;
+            // 
             // serverDBDataSet
             // 
             this.serverDBDataSet.DataSetName = "ServerDBDataSet";
             this.serverDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // serversBindingSource
+            // servRefreshBttn
             // 
-            this.serversBindingSource.DataMember = "Servers";
-            this.serversBindingSource.DataSource = this.serverDBDataSet;
+            this.servRefreshBttn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.servRefreshBttn.Location = new System.Drawing.Point(685, 549);
+            this.servRefreshBttn.Name = "servRefreshBttn";
+            this.servRefreshBttn.Size = new System.Drawing.Size(75, 23);
+            this.servRefreshBttn.TabIndex = 0;
+            this.servRefreshBttn.Text = "Refresh";
+            this.servRefreshBttn.UseVisualStyleBackColor = true;
+            this.servRefreshBttn.Click += new System.EventHandler(this.servRefreshBttn_Click);
             // 
             // serversTableAdapter
             // 
@@ -507,86 +508,86 @@
             // serverInvIDNumDataGridViewTextBoxColumn
             // 
             this.serverInvIDNumDataGridViewTextBoxColumn.DataPropertyName = "serverInvIDNum";
-            this.serverInvIDNumDataGridViewTextBoxColumn.HeaderText = "serverInvIDNum";
+            this.serverInvIDNumDataGridViewTextBoxColumn.HeaderText = "Server Inventory ID Number";
             this.serverInvIDNumDataGridViewTextBoxColumn.Name = "serverInvIDNumDataGridViewTextBoxColumn";
             this.serverInvIDNumDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // serverMakeDataGridViewTextBoxColumn
             // 
             this.serverMakeDataGridViewTextBoxColumn.DataPropertyName = "serverMake";
-            this.serverMakeDataGridViewTextBoxColumn.HeaderText = "serverMake";
+            this.serverMakeDataGridViewTextBoxColumn.HeaderText = "Server Make";
             this.serverMakeDataGridViewTextBoxColumn.Name = "serverMakeDataGridViewTextBoxColumn";
             // 
             // serverModelDataGridViewTextBoxColumn
             // 
             this.serverModelDataGridViewTextBoxColumn.DataPropertyName = "serverModel";
-            this.serverModelDataGridViewTextBoxColumn.HeaderText = "serverModel";
+            this.serverModelDataGridViewTextBoxColumn.HeaderText = "Server Model";
             this.serverModelDataGridViewTextBoxColumn.Name = "serverModelDataGridViewTextBoxColumn";
             // 
             // serverSerNumDataGridViewTextBoxColumn
             // 
             this.serverSerNumDataGridViewTextBoxColumn.DataPropertyName = "serverSerNum";
-            this.serverSerNumDataGridViewTextBoxColumn.HeaderText = "serverSerNum";
+            this.serverSerNumDataGridViewTextBoxColumn.HeaderText = "Server Serial Number";
             this.serverSerNumDataGridViewTextBoxColumn.Name = "serverSerNumDataGridViewTextBoxColumn";
             // 
             // serverProcDataGridViewTextBoxColumn
             // 
             this.serverProcDataGridViewTextBoxColumn.DataPropertyName = "serverProc";
-            this.serverProcDataGridViewTextBoxColumn.HeaderText = "serverProc";
+            this.serverProcDataGridViewTextBoxColumn.HeaderText = "Server Processor";
             this.serverProcDataGridViewTextBoxColumn.Name = "serverProcDataGridViewTextBoxColumn";
             // 
             // serverProcSpeedDataGridViewTextBoxColumn
             // 
             this.serverProcSpeedDataGridViewTextBoxColumn.DataPropertyName = "serverProcSpeed";
-            this.serverProcSpeedDataGridViewTextBoxColumn.HeaderText = "serverProcSpeed";
+            this.serverProcSpeedDataGridViewTextBoxColumn.HeaderText = "Server Processor Speed";
             this.serverProcSpeedDataGridViewTextBoxColumn.Name = "serverProcSpeedDataGridViewTextBoxColumn";
             // 
             // serverRAMDataGridViewTextBoxColumn
             // 
             this.serverRAMDataGridViewTextBoxColumn.DataPropertyName = "serverRAM";
-            this.serverRAMDataGridViewTextBoxColumn.HeaderText = "serverRAM";
+            this.serverRAMDataGridViewTextBoxColumn.HeaderText = "Server RAM";
             this.serverRAMDataGridViewTextBoxColumn.Name = "serverRAMDataGridViewTextBoxColumn";
             // 
             // serverOSDataGridViewTextBoxColumn
             // 
             this.serverOSDataGridViewTextBoxColumn.DataPropertyName = "serverOS";
-            this.serverOSDataGridViewTextBoxColumn.HeaderText = "serverOS";
+            this.serverOSDataGridViewTextBoxColumn.HeaderText = "Server Operating System";
             this.serverOSDataGridViewTextBoxColumn.Name = "serverOSDataGridViewTextBoxColumn";
             // 
             // serverOSBitTypeDataGridViewTextBoxColumn
             // 
             this.serverOSBitTypeDataGridViewTextBoxColumn.DataPropertyName = "serverOSBitType";
-            this.serverOSBitTypeDataGridViewTextBoxColumn.HeaderText = "serverOSBitType";
+            this.serverOSBitTypeDataGridViewTextBoxColumn.HeaderText = "Server Operating System Bit Type";
             this.serverOSBitTypeDataGridViewTextBoxColumn.Name = "serverOSBitTypeDataGridViewTextBoxColumn";
             // 
             // serverHDDDataGridViewTextBoxColumn
             // 
             this.serverHDDDataGridViewTextBoxColumn.DataPropertyName = "serverHDD";
-            this.serverHDDDataGridViewTextBoxColumn.HeaderText = "serverHDD";
+            this.serverHDDDataGridViewTextBoxColumn.HeaderText = "Server HDD";
             this.serverHDDDataGridViewTextBoxColumn.Name = "serverHDDDataGridViewTextBoxColumn";
             // 
             // serverHDDRaidTypeDataGridViewTextBoxColumn
             // 
             this.serverHDDRaidTypeDataGridViewTextBoxColumn.DataPropertyName = "serverHDDRaidType";
-            this.serverHDDRaidTypeDataGridViewTextBoxColumn.HeaderText = "serverHDDRaidType";
+            this.serverHDDRaidTypeDataGridViewTextBoxColumn.HeaderText = "Server HDD Raid Type";
             this.serverHDDRaidTypeDataGridViewTextBoxColumn.Name = "serverHDDRaidTypeDataGridViewTextBoxColumn";
             // 
             // serverHDDCapDataGridViewTextBoxColumn
             // 
             this.serverHDDCapDataGridViewTextBoxColumn.DataPropertyName = "serverHDDCap";
-            this.serverHDDCapDataGridViewTextBoxColumn.HeaderText = "serverHDDCap";
+            this.serverHDDCapDataGridViewTextBoxColumn.HeaderText = "Server HDD Capacity";
             this.serverHDDCapDataGridViewTextBoxColumn.Name = "serverHDDCapDataGridViewTextBoxColumn";
             // 
             // serverVirtualDataGridViewTextBoxColumn
             // 
             this.serverVirtualDataGridViewTextBoxColumn.DataPropertyName = "serverVirtual";
-            this.serverVirtualDataGridViewTextBoxColumn.HeaderText = "serverVirtual";
+            this.serverVirtualDataGridViewTextBoxColumn.HeaderText = "Server Virtual";
             this.serverVirtualDataGridViewTextBoxColumn.Name = "serverVirtualDataGridViewTextBoxColumn";
             // 
             // serverLocationDataGridViewTextBoxColumn
             // 
             this.serverLocationDataGridViewTextBoxColumn.DataPropertyName = "serverLocation";
-            this.serverLocationDataGridViewTextBoxColumn.HeaderText = "serverLocation";
+            this.serverLocationDataGridViewTextBoxColumn.HeaderText = "Server Location";
             this.serverLocationDataGridViewTextBoxColumn.Name = "serverLocationDataGridViewTextBoxColumn";
             // 
             // ServerFrm
@@ -608,8 +609,8 @@
             this.servInputTab.PerformLayout();
             this.servViewTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serverDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serversBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serverDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

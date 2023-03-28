@@ -44,9 +44,14 @@ namespace InventoryDBWinFrm
             this.Close();
         }
 
-        private void monitorsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void MonitorFrm_Load(object sender, EventArgs e)
         {
+            this.monitorsTableAdapter.Fill(this.monitorDBDataSet.Monitors);
+        }
 
+        private void monRefreshBttn_Click(object sender, EventArgs e)
+        {
+            this.monitorsTableAdapter.Fill(monitorDBDataSet.Monitors);
         }
     }
 }
